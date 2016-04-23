@@ -1,5 +1,5 @@
 #OBJS specifies which files to compile as part of the project 
-OBJS = main.cpp Player.cpp Framework.cpp
+OBJS = main.cpp Player.cpp Framework.cpp Boxes.cpp
 #CC specifies which compiler we're using 
 CC = g++ 
 #COMPILER_FLAGS specifies the additional compilation options we're using 

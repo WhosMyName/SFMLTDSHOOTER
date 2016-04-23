@@ -4,7 +4,8 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-#include "Player.hpp"
+#include <Player.hpp>
+#include <Boxes.hpp>
 
 class Framework
 {
@@ -34,6 +35,7 @@ class Framework
 		bool				mRun;
 
 		Player				*pPlayer;
+		Boxes				*pBoxes;
 
 };
 
