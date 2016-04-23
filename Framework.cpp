@@ -3,7 +3,7 @@
 
 Framework::Framework()
 {
-	pRenderWindow	= new sf::RenderWindow(sf::VideoMode(1920, 1080, 32), "MyGame");
+	pRenderWindow	= new sf::RenderWindow(sf::VideoMode(1280, 720, 32), "MyGame");
 	pRenderWindow->setFramerateLimit(60);
 	pMainEvent		= new sf::Event;
 	pClock			= new sf::Clock;
