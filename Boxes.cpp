@@ -18,9 +18,10 @@ Boxes::Boxes(std::string texturePath, sf::Vector2f position)
 
 	pTexture->loadFromImage(subImage);
 	pSprite->setTexture(*pTexture);
-	pSprite->setScale(0.5, 0.5);
+	pSprite->setScale(0.3, 0.3);
 	pSprite->setOrigin(175,50);
 	pSprite->setPosition(position);
+	pSprite->setOrigin(pTexture->getSize().x/(rand() % 2 + 1), pTexture->getSize().y/(rand() % 2 + 1));
 	
 }
 
@@ -34,7 +35,9 @@ void Boxes::handle()
 
 }
 
-void Boxes::update(float frametime, sf::RenderWindow *rw)
+void Boxes::update(float frametime)
 {
-
+	pSprite->rotate(random * frametime);
+	pSprite->move(120*frametime, 0);
+	//std::cout << "Random Equals: "<< random << std::endl;
 }

@@ -14,8 +14,12 @@ Framework::Framework()
 	pSprite			= new sf::Sprite;
 	pSprite->setTexture(*pBackground);
 
-	pPlayer			= new Player(std::string("soldiertest.png"),sf::Vector2f(1000,500));
-	pBoxes			= new Boxes(std::string("Boxes.png"),sf::Vector2f(1200,400));
+	pPlayer			= new Player(std::string("soldiertest.png"), sf::Vector2f(1000,500));
+	pManager		= new BoxesManager();
+	Boxes *p 		= new Boxes(std::string("Boxes.png"), sf::Vector2f(0,400));
+		
+
+	pManager->insert(p);
 }
 
 Framework::~Framework()
@@ -44,7 +48,7 @@ void Framework::quit()
 void Framework::update(float frametime, sf::RenderWindow *rw)
 {
 	pPlayer->update(frametime, rw);
-	pBoxes->update(frametime, rw);
+	pManager->update(frametime);
 }
 
 void Framework::handleEvents()
@@ -56,7 +60,7 @@ void Framework::handleEvents()
 			mRun = false;
 		}
 		pPlayer->handle();
-		pBoxes->handle();
+		pManager->handle();
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 		mRun = false;
@@ -67,7 +71,7 @@ void Framework::render()
 	pRenderWindow->clear(sf::Color(255, 120, 120));
 	pRenderWindow->draw(*pSprite);
 	pPlayer->render(pRenderWindow);
-	pBoxes->render(pRenderWindow);
+	pManager->render(pRenderWindow);
 	pRenderWindow->display();
 }
 

@@ -1,10 +1,10 @@
 #OBJS specifies which files to compile as part of the project 
-OBJS = main.cpp Player.cpp Framework.cpp Boxes.cpp
+OBJS = main.cpp Player.cpp Framework.cpp Boxes.cpp BoxesManager.cpp
 #CC specifies which compiler we're using 
 CC = g++ 
 #COMPILER_FLAGS specifies the additional compilation options we're using 
 # -w suppresses all warnings 
-COMPILER_FLAGS = -w -I.
+COMPILER_FLAGS = -w -I. -std=c++11
 #LINKER_FLAGS specifies the libraries we're linking against 
 LINKER_FLAGS = -lsfml-graphics -lsfml-window -lsfml-system 
 #OBJ_NAME specifies the name of our exectuable 

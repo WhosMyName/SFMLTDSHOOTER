@@ -6,6 +6,7 @@
 
 #include <Player.hpp>
 #include <Boxes.hpp>
+#include <BoxesManager.hpp>
 
 class Framework
 {
@@ -35,7 +36,7 @@ class Framework
 		bool				mRun;
 
 		Player				*pPlayer;
-		Boxes				*pBoxes;
+		BoxesManager*		pManager;
 
 };
 

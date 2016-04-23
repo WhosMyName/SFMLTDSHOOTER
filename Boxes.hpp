@@ -10,7 +10,7 @@ class Boxes
 public:
 	Boxes(std::string texturePath, sf::Vector2f position);
 
-	void update(float frametime, sf::RenderWindow *rw);
+	void update(float frametime);
 	void render(sf::RenderWindow *rw);
 	void handle();
 
@@ -19,6 +19,7 @@ private:
 	//void loadPlayer();
 	sf::Texture *pTexture;
 	sf::Sprite  *pSprite;
+	int random = (rand() % 100 + 25);
 };
 
 #endif // !BOXES_HPP#pragma once
