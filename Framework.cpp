@@ -16,7 +16,7 @@ Framework::Framework()
 
 	pPlayer			= new Player(std::string("soldiertest.png"), sf::Vector2f(1000,500));
 	pManager		= new BoxesManager();
-	Boxes *p 		= new Boxes(std::string("Boxes.png"), sf::Vector2f(0,400));
+	Boxes *p 		= new Boxes(std::string("BoxMelon.png"), sf::Vector2f(0,400));
 		
 
 	pManager->insert(p);
